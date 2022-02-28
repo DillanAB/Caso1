@@ -3,6 +3,8 @@
 #include <map>
 using namespace std;
 
+//Dillan Almendares Barrantes
+
 vector<int> compareTriplets_1(vector<int> a, vector<int> b) { //Versión mala.
     vector<int> resTriplet(2,0);
     for (int i=0; i<3; i++){ //Hace 4 comparaciones en el for y 4 incrementos a i.
@@ -131,12 +133,9 @@ string cipher(int k, string s) {
     vec[0] = stoi(s,0,2);
     int aux = vec[0];
     for (int i=1;i<k; i++){
-        cout << "VECX: "<< vec[i-1] << endl;
         vec[i] = vec[i-1]<<1;
-        cout << "VECX: "<< vec[i-1] << endl;
         aux = vec[i]^aux;
     }
-    cout << aux<<endl;
     return to_string(aux);
 }
 
@@ -170,9 +169,13 @@ int main(int argc, char** argv){
 	cout << "B: {13,17,10} = "<< res[1] << endl;
     a = {6,7,8};
     b = {1,2,3};
+    cout <<endl;
     res = compareTriplets_1(a, b);
     cout << "A: {6,7,8} = "<< res[0] << " | ";
 	cout << "B: {1,2,3} = "<< res[1] << endl;
+
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de compareTriplets_2:" << endl;
     a={12,324,10};
@@ -182,35 +185,56 @@ int main(int argc, char** argv){
 	cout << "B: {13,17,10} = "<< res[1] << endl;
     a = {6,7,8};
     b = {1,2,3};
+
+    cout <<endl;
     res = compareTriplets_2(a, b);
     cout << "A: {6,7,8} = "<< res[0] << " | ";
 	cout << "B: {1,2,3} = "<< res[1] << endl;
 
+    cout <<endl;
+    cout <<endl;
+
     cout <<"Pruebas de timeConversion_1:" << endl;
     cout <<"12:45:22AM = "<< timeConversion_1("12:45:22AM") << endl;
+    cout <<endl;
     cout <<"08:35:27PM = "<< timeConversion_1("08:35:27PM") << endl;
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de timeConversion_2:" << endl;
     cout <<"12:45:22AM = "<< timeConversion_2("12:45:22AM") << endl;
+    cout <<endl;
     cout <<"08:35:27PM = "<< timeConversion_2("08:35:27PM") << endl;
+    cout <<endl;
+    cout <<endl;
 
 
     vector<int> vec1 = {1,2,1,3,2};
     vector<int> vec2 = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
     cout <<"Pruebas de SubarrayDivision_1:" << endl;
-    cout <<" = "<< SubarrayDivision_1(vec1, 5, 3, 2) << endl;
-    cout <<" = "<< SubarrayDivision_1(vec2, 19, 18, 7) << endl;
+    cout <<"D=3 M=2  {1,2,1,3,2} = "<< SubarrayDivision_1(vec1, 5, 3, 2) << endl;
+    cout <<endl;
+    cout <<"D=18 M=7 {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1} = "<< SubarrayDivision_1(vec2, 19, 18, 7) << endl;
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de SubarrayDivision_2:" << endl;
-    cout <<" = "<< SubarrayDivision_2(vec1, 5, 3, 2) << endl;
-    cout <<" = "<< SubarrayDivision_2(vec2, 19, 18, 7) << endl;
+    cout <<"D=3 M=2  {1,2,1,3,2} = "<< SubarrayDivision_2(vec1, 5, 3, 2) << endl;
+    cout <<endl;
+    cout <<"D=18 M=7 {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1} = "<< SubarrayDivision_2(vec2, 19, 18, 7) << endl;
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de MinionGame:" << endl;
     cout <<"BANANA = "<< minionGame("BANANA") << endl;
     cout <<"AGUACATE = "<< minionGame("AGUACATE") << endl;
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de Cipher:" << endl;
     cout <<"K=4 1110100110 = "<< cipher(4, "1110100110") << endl;
+    cout <<endl;
+    cout <<endl;
 
     cout <<"Pruebas de Pairs:" << endl;
     cout <<"K=2 {1,5,3,4,2} =  "<< pairs(2, 5, {1,5,3,4,2}) << endl;
